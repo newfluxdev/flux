@@ -13,6 +13,7 @@ async function startFluxFunctions() {
     log.info('Initiating MongoDB connection');
     await serviceHelper.initiateDB(); // either true or throws error
     log.info('DB connected');
+    return;
     log.info('Preparing local database...');
     const db = serviceHelper.databaseConnection();
     const database = db.db(config.database.local.database);
